@@ -73,22 +73,23 @@
 <body>
     <div class="container">
         <h1>Register</h1>
-        <form action="/login" method="POST">
+        <form action="/register" method="POST">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
 
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
+            <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido">
 
             <label for="gmail">Email:</label>
-            <input type="email" id="gmail" name="gmail" required>
+            <input type="email" id="gmail" name="gmail" required  placeholder="asdf@asdf.com">
 
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Registrar</button>
+            <input type="password" id="password" name="password" required placeholder="************">
+            <div class="g-recaptcha" data-sitekey="<%= siteKey %>"></div>
+            <button type="submit" style="margin-top: 20px ; margin-left: 100px;">Registrar</button>
         </form>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
